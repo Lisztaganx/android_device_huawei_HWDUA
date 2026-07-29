@@ -36,4 +36,15 @@ Stuff you will need:
 | The device tree | ??? | Obviously |
 | Ubuntu 18 | https://releases.ubuntu.com/18.04/ | To pretend it's 2018 and use old dependencies and software like openjdk-8 without compromising your main Linux system with old packages. Also, the compiler may not work with modern dependencies and to avoid that just use Ubuntu 18 |
 
-Steps:
+# Steps:
+
+1. Set up an Ubuntu 18 VM with the VM software of your choice and give it enough storage and RAM.
+2. Set up Google's Repo tool
+3. Create a directory where you want the TWRP Minimal Manifest 9.0 Source Code and cd to it.
+4. Use `repo init` to clone source code
+5. Use `repo sync` to download the source code. (Use arguments -j1 to improve perfomance in some cases and --force-sync to fix stuff sometimes)
+6. After the source code is downloaded, clone the device tree into the respective device/huawei/HWDUA directory. (For example, Android.mk should be in twrp_repo/device/huawei/HWDUA/Android.mk)
+7. Acquire (from your device) and replace the files I did not provide in the respective device tree directory (see above, first table).
+8. Run lunch and select the omni userdebug option because that one actually compiles. If it complains, it may be fine, just ignore it.
+9. Now here's the actual fun part. If everything is supposed to be working, run `mka recoveryimage -j$(nproc)` and wait. Watch out for errors if compiling for the first time because you might still need to install some dependencies like `openjdk-8-dev` or `m4`. Ignore warnings.
+10. At the end, you should have a recovery.img somewhere in the output/ folder so take that and do what you want with it.
