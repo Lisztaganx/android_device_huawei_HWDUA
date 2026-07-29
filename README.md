@@ -11,11 +11,11 @@
 # MUST READ!!! EXPLANATION BELOW OR IT WILL NOT BUILD!
 Anyway that's the default readme file out of the way, this took a lot of trial and error to make sure it works and I will also try to give further instructions on how to compile a TWRP recovery for this device, just in case someone is crazy enough like me to build a custom recovery like it's 2018.
 
-The device is technically not **huawei_HWDUA** but **honor_HWDUA-M**. However, since twrpdtgen detected it as a Huawei, I left is as is. The "-M" removal is because lunch gets confused by the "-M" and treats it like "-userdebug" or something which does not work and fails.
+The device is technically not **huawei_HWDUA** but **honor_HWDUA-M**. However, since [twrpdtgen](https://github.com/twrpdtgen/twrpdtgen) detected it as a Huawei, I left is as is. The "-M" removal is because lunch gets confused by the "-M" and treats it like "-userdebug" or something which does not work and fails.
 
-Anyway, there are 6 files you will need to source from your own device because I am not sure if I am allowed to upload them
+Anyway, there are 6 files listed here that you will need to source from your own device because I am not sure if I am allowed to upload them:
 
-| Files in tree | Where to get | Explanation |
+| File in tree | Where to get | Explanation |
 | --- | --- | --- |
 | prebuilt/kernel | stock recovery ramdisk kernel | The kernel image can be found in the stock recovery's ramdisk (extract it with whatever tool works) |
 | prebuilt/zImage | stock recovery ramdisk kernel | Same file, I don't know if it will build without it. Just in case. |
@@ -23,6 +23,8 @@ Anyway, there are 6 files you will need to source from your own device because I
 | recovery/root/init.recovery.mt6739.rc | stock recovery ramdisk | I don't know if I can upload it. It's just text but I'd rather not risk getting sued. |
 | recovery/root/microtrust.rc | stock recovery ramdisk | I don't know if I can upload it. It's just text but I'd rather not risk getting sued. |
 | recovery/root/ueventd.rc | stock recovery ramdisk | I don't know if I can upload it. It's just text but I'd rather not risk getting sued. |
+
+Those files exist in this repository but they are just placeholder text so you can replace them.
 
 # Building for TWRP Minimal Manifest 9.0
 Stuff you will need:
