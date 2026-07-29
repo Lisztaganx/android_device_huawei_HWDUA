@@ -25,6 +25,8 @@ The device is technically not **huawei_HWDUA** but **honor_HWDUA-M**. However, s
 # Building for TWRP Minimal Manifest 9.0
 Stuff you will need:
 
+| What | Where | Why |
+| --- | --- | --- |
 | Google's Repo Client | https://storage.googleapis.com/git-repo-downloads/repo | To download the source code |
 | TWRP Minimal Manifest 9.0 Source | ??? | The source code |
 | The device tree | ??? | Obviously |
