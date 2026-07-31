@@ -1,2 +1,0 @@
-# Not sure actually. A tutorial said that the kernel should be named zImage in this directory but when I was compiling it, it complained that there was no kernel in prebuilt/kernel so I copied it and changed the name.
-# Just in case.
