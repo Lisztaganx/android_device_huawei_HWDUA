@@ -14,12 +14,11 @@ This took a lot of trial and error to make sure it works and I will also try to 
 
 The device is technically not **huawei_HWDUA** but **honor_HWDUA-M**. However, since [twrpdtgen](https://github.com/twrpdtgen/twrpdtgen) detected it as a Huawei, I left is as is. The `HWDUA-M` to `HWDUA` rename is because lunch gets confused by the `-M` and treats it like `-userdebug` or something which does not work and fails.
 
-Anyway, there are 6 files listed here that you will need to source from your own device because I am not sure if I am allowed to upload them:
+Anyway, there are 5 files listed here that you will need to source from your own device because I am not sure if I am allowed to upload them:
 
 | File in tree | Where to get | Explanation |
 | --- | --- | --- |
 | `prebuilt/kernel` | stock recovery/kernel | The kernel image can be found in the extracted stock recovery's root folder (extract it with whatever tool works) |
-| `prebuilt/zImage` | stock recovery/kernel | Same file, I don't know if it will build without it. Just in case. |
 | `recovery/root/init.recovery.huawei.rc` | stock recovery/ramdisk/init.recovery.huawei.rc | I don't know if I can upload it. It's just text but I'd rather not risk getting sued. |
 | `recovery/root/init.recovery.mt6739.rc` | stock recovery/ramdisk/init.recovery.mt6739.rc | I don't know if I can upload it. It's just text but I'd rather not risk getting sued. |
 | `recovery/root/microtrust.rc` | stock recovery/ramdisk/microtrust.rc | I don't know if I can upload it. It's just text but I'd rather not risk getting sued. |
